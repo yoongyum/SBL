@@ -1,4 +1,4 @@
-package com.example.hello.dto;
+package com.example.hello;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -6,13 +6,23 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
-@JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class)
-@JsonInclude(JsonInclude.Include.NON_NULL)  //null값은 출력하지 않음.
+//@JsonInclude(JsonInclude.Include.NON_NULL)  //null값은 출력하지 않음.
 public class User {
     private String name;
     private Integer age;
+
+    @JsonProperty("phone_number")
     private String phoneNumber;
     private String address;
+
+    public User() {
+    }
+
+    public User(String name, int age, String phoneNumber) {
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+    }
 
     public String getName() {
         return name;
@@ -45,6 +55,7 @@ public class User {
     public void setAddress(String address) {
         this.address = address;
     }
+
 
     @Override
     public String toString() {
