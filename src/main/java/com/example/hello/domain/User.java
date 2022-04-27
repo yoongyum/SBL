@@ -1,4 +1,4 @@
-package com.example.hello;
+package com.example.hello.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
