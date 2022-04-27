@@ -1,8 +1,6 @@
 package com.example.hello.repository;
 
 import com.example.hello.domain.Member;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
