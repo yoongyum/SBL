@@ -13,13 +13,12 @@ import java.util.Optional;
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    public MemberService() {
+        memberRepository = new MemoryMemberRepository();
+    }
     @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
-    }
-
-    public MemberService() {
-        memberRepository = new MemoryMemberRepository();
     }
 
     /*
