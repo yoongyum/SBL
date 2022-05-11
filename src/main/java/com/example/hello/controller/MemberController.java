@@ -12,7 +12,7 @@ import java.util.List;
 
 @Controller
 public class MemberController {
-    private final MemberService memberService;
+    private MemberService memberService;
 
     @Autowired  //의존관계 주입
     public MemberController(MemberService memberService) {
